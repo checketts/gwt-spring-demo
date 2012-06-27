@@ -5,7 +5,7 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 
-public class ApplicationShell extends Composite  {
+public class ApplicationShell extends Composite implements Shell {
 
     private static ApplicationShellUiBinder uiBinder = GWT.create(ApplicationShellUiBinder.class);
 

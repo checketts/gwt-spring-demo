@@ -1,8 +1,12 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='res' type='com.github.checketts.client.resources.R'/>
 	<ui:style>
 	</ui:style>
 	<g:HTMLPanel>
-	Shell!
+	<div> Header</div>
+	
+	<div class="{res.css.floatLeft}">Left</div>
+	<div class="{res.css.floatRight}">Right</div>
 	</g:HTMLPanel>
 </ui:UiBinder> 
