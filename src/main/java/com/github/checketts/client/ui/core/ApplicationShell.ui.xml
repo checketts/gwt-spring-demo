@@ -22,6 +22,17 @@
 	.mainContent{
 	}
 	
+	.sidebar a{
+		display: block;
+		
+	}
+	
+	.sidebar a:hover{
+		display: block;
+		text-decoration: none;
+		
+	}
+	
 	.sidebarPresent.mainContent{
 		margin-left: 200px;
 	}
@@ -34,7 +45,7 @@
 		</g:SimplePanel>
 	</div>
 	
-	<g:SimplePanel ui:field="sidebarHolder" styleName="{res.css.floatLeft}" />
+	<g:SimplePanel ui:field="sidebarHolder" styleName="{style.sidebar} {res.css.floatLeft}" />
 	<g:SimplePanel ui:field="mainContent" styleName="{style.mainContent}" />
 	</g:HTMLPanel>
 </ui:UiBinder> 
