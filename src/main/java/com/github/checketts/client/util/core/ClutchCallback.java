@@ -1,4 +1,4 @@
-package com.github.checketts.client.util;
+package com.github.checketts.client.util.core;
 
 
 /**
@@ -28,7 +28,7 @@ public abstract class ClutchCallback<T>{
       //Clutch notifies the user by default, so not required
     }
     
-    final Class<T> getResultClass() {
+    public final Class<T> getResultClass() {
         return resultClass;
     }
 }

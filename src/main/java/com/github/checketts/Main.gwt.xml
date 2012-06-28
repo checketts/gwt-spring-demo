@@ -13,11 +13,25 @@
 	<!-- Enables Gin DI -->
 	<inherits name="com.google.gwt.inject.Inject" />
 
+	<!-- MVP locations -->
+	<inherits name="com.google.gwt.place.Place" />
+	<inherits name="com.google.gwt.activity.Activity" />
+
+	<!-- Enable autobean factory and such -->
+	<inherits name="com.google.gwt.json.JSON" />
+	<inherits name="com.google.web.bindery.autobean.AutoBean" />
+
+	<!-- CSSResource keep the original CSS class, without package/class added (see pretty, stable, stable-shorttype, stable-notype, obf) -->
+	<set-configuration-property name="CssResource.style" value="stable-shorttype" />
+	<!-- CSS classes get a prefix, lets turn them off -->
+	<set-configuration-property name="CssResource.obfuscationPrefix" value="empty" />
+
+
 
 	<!-- Inherit the default GWT style sheet. You can change -->
 	<!-- the theme of your GWT application by uncommenting -->
 	<!-- any one of the following lines. -->
-	<inherits name='com.google.gwt.user.theme.standard.Standard' />
+	<!-- <inherits name='com.google.gwt.user.theme.standard.Standard' /> -->
 	<!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
 	<!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/> -->
 
@@ -27,7 +41,6 @@
 	<entry-point class='com.github.checketts.client.Main' />
 
 	<!-- Specify the paths for translatable code -->
-	<source path='client' />
-	<source path='shared' />
-
+	<source path="client" excludes="**/*Test.java" />
+	<source path="shared" excludes="**/*Test.java" />
 </module>

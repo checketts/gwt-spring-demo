@@ -1,12 +1,40 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:with field='res' type='com.github.checketts.client.resources.R'/>
-	<ui:style>
+	<ui:style type="com.github.checketts.client.ui.core.ApplicationShell.Style">
+	@external .mainContent;
+	
+	.header{
+		width: 100%;
+	}
+	
+	.logo{
+		float: left;
+		cursor: pointer;
+	}
+	
+	.headerContents{
+		float: left;
+		font-size: 50px;
+		line-height: 100px;
+	}
+	
+	.mainContent{
+	}
+	
+	.sidebarPresent.mainContent{
+		margin-left: 200px;
+	}
 	</ui:style>
 	<g:HTMLPanel>
-	<div> Header</div>
+	<div class="{style.header} {res.css.group}">
+		<g:Image ui:field="headerLogo" resource="{res.gwtLogo}" styleName="{style.logo}" />
+		<g:SimplePanel ui:field="header" >
+			<g:Label text="Coding Sprint" styleName="{style.headerContents}" />
+		</g:SimplePanel>
+	</div>
 	
-	<div class="{res.css.floatLeft}">Left</div>
-	<div class="{res.css.floatRight}">Right</div>
+	<g:SimplePanel ui:field="sidebarHolder" styleName="{res.css.floatLeft}" />
+	<g:SimplePanel ui:field="mainContent" styleName="{style.mainContent}" />
 	</g:HTMLPanel>
 </ui:UiBinder> 

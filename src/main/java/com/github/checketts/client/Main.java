@@ -19,5 +19,6 @@ public class Main implements EntryPoint {
       
     // Use RootPanel.get() to get the entire body element
     RootPanel.get().add(Injector.INSTANCE.getAppShell());
+    Injector.INSTANCE.getPlaceHistoryHandler().handleCurrentHistory();
   }
 }

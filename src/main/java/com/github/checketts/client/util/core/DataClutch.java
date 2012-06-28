@@ -1,4 +1,4 @@
-package com.github.checketts.client.util;
+package com.github.checketts.client.util.core;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

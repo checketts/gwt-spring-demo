@@ -13,7 +13,7 @@ import com.google.gwt.junit.client.GWTTestCase;
  * See http://mojo.codehaus.org/gwt-maven-plugin/user-guide/testing.html 
  * for details.
  */
-public class GwtTestgwtmodule extends GWTTestCase {
+public class GwtTestAppShell extends GWTTestCase {
 
   /**
    * Must refer to a valid module that sources this class.

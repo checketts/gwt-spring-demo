@@ -5,3 +5,15 @@
 .floatRight{
 	float: right
 }
+
+
+/*Clearfix styles - group is a better name*/
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+
+.group:after {
+   	clear:both;
+}

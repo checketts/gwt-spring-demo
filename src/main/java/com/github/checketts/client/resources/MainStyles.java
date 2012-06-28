@@ -6,5 +6,5 @@ public interface MainStyles extends CssResource{
     //Layout styles
     String floatRight();
     String floatLeft();
-
+    String group();
 }
