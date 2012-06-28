@@ -32,6 +32,12 @@
 		</dependency>
 		<dependency>
 			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-dev</artifactId>
+			<version>${gwtVersion}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
 			<artifactId>gwt-user</artifactId>
 			<version>${gwtVersion}</version>
 			<scope>provided</scope>
@@ -74,10 +80,10 @@
 
 		<!-- GIN Stuff -->
 		<dependency>
-		    <groupId>com.google.gwt.inject</groupId>
-		    <artifactId>gin</artifactId>
-		    <version>1.5.0</version>
-		    <scope>provided</scope>
+			<groupId>com.google.gwt.inject</groupId>
+			<artifactId>gin</artifactId>
+			<version>1.5.0</version>
+			<scope>provided</scope>
 		</dependency>
 
 
@@ -110,7 +116,7 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.core.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
@@ -132,6 +138,13 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20090211</version>
+		</dependency>
+
 
 		<!-- A seamless aspect-oriented extension to the Java programming language -->
 		<dependency>
@@ -178,8 +191,10 @@
 				</executions>
 				<!-- Plugin configuration. There are many available options, see gwt-maven-plugin documentation at codehaus.org -->
 				<configuration>
+					<mode>htmlunit</mode>
 					<runTarget>index.html</runTarget>
 					<hostedWebapp>${webappDirectory}</hostedWebapp>
+					<localWorkers>2</localWorkers>
 				</configuration>
 			</plugin>
 
@@ -207,6 +222,18 @@
 				<configuration>
 					<source>1.6</source>
 					<target>1.6</target>
+				</configuration>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>maven-jetty-plugin</artifactId>
+				<version>6.1.26</version>
+				<configuration>
+					<!-- <reload>manual</reload> -->
+					<contextPath>/</contextPath>
+					<!-- <scanIntervalSeconds>1</scanIntervalSeconds> -->
 				</configuration>
 			</plugin>
 		</plugins>
